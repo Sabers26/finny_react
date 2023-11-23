@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import "../style/app.css"
 import { Outlet, Link } from "react-router-dom";
+import Navbar from '../navbar/navbar';
 import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
   }
   return (
     <>
-      {<div className="container mt-5 text-white">
+      <Navbar/>
+      <div className="container mt-5 text-white">
         <header className="pb-3 mb-4 border-bottom">
           <h1>Hackaton 2023</h1>     
         </header>
@@ -37,7 +39,7 @@ function App() {
         <footer className="pt-3 mt-4 border-top">
           <p>&copy; Creado en 2023</p>
         </footer>
-      </div>}
+      </div>
     </>
   )
 }
